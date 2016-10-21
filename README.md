@@ -1,2 +1,2 @@
 # VintageSolidCaret
-Sublime Text 3 plugin to make caret style solid in Vintage command mode
+Plugin sets the `caret_style` option to `solid` in Vintage command mode and sets it back on Vintage insert mode.
