@@ -18,19 +18,15 @@ def plugin_loaded():
 
 
 def plugin_unloaded():
-    cs = sublime.load_settings('Preferences.sublime-settings').get('caret_style')
     for w in sublime.windows():
         for v in w.views():
             s = v.settings()
-            s.set('caret_style', cs)
+            s.erase('caret_style')
             s.set('_old_command_mode', True)
 
 
 def _set_insert_mode_caret(view):
-    view.settings().set(
-        'caret_style',
-        sublime.load_settings('Preferences.sublime-settings').get('caret_style')
-    )
+    view.settings().erase('caret_style')
 
 
 def _set_command_mode_caret(view):
